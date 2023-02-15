@@ -49,7 +49,7 @@ class CuacaController extends Controller
             $data->save();  
         } catch (\Throwable $th) {
             toastr()->error('Gagal', $th);
-            return redirect()->back();
+            return redirect()->back();  
         }
 
         if ($data) {
