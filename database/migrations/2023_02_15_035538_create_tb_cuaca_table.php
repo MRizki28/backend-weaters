@@ -15,8 +15,8 @@ class CreateTbCuacaTable extends Migration
     {
         Schema::create('tb_cuaca', function (Blueprint $table) {
             $table->id();
-            $table->string('Provinsi');
-            $table->string('Kota');
+            $table->string('provinsi');
+            $table->string('kota');
             $table->string('keterangan');
             $table->string('suhu');
             $table->date('tanggal');
