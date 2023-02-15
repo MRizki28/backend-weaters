@@ -22,3 +22,4 @@ Route::get('/cuaca', function () {
 });
 
 Route::post('/cuaca', [CuacaController::class ,'store'])->name('tambahData.cuaca');
+Route::get('/cuaca', [CuacaController::class ,'index']);
