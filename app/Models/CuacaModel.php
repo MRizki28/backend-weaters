@@ -10,6 +10,7 @@ class CuacaModel extends Model
     use HasFactory;
 
     protected $table = 'tb_cuaca';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'id' , 'provinsi' ,'kota','keterangan' ,'suhu' ,'tanggal'
     ];
