@@ -12,6 +12,6 @@ class CuacaModel extends Model
     protected $table = 'tb_cuaca';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'id' , 'provinsi' ,'kota','keterangan' ,'suhu' ,'tanggal'
+        'id' , 'provinsi' ,'kota','keterangan' ,'suhu' ,'tanggal', 'created_at','updated_at'
     ];
 }
