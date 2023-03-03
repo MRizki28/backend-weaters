@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\API\ApiController;
+use App\Http\Controllers\CMS\ChangeController;
 use App\Http\Controllers\CMS\CuacaController;
+use App\Models\CuacaModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +29,15 @@ Route::get('/cuaca/{id}', [ApiController::class, 'show']);
 Route::post('/register', [App\Http\Controllers\API\AuthController::class, 'register']);
 //API route for login user
 Route::post('/login', [App\Http\Controllers\API\AuthController::class, 'login']);
+
+
+// Route::get('/cuaca', [ChangeController::class, 'index']);
+// Route::post('/cuaca', [ChangeController::class, 'store']);
+// Route::get('/cuaca/{id}', [ChangeController::class, 'getById']);
+
+Route::get('/cuaca1', [ChangeController::class ,'index']);
+
+
 
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
