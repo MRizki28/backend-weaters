@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\CMS\ChangeController;
 use App\Http\Controllers\CMS\CuacaController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,14 +30,15 @@ Route::prefix('auth')->controller(AuthController::class)->group(function() {
     Route::post('/login', 'login')->name('auth.login');
     Route::get('/logout', 'logout')->name('logout');
 });
+Route::get('/cuaca', [ChangeController::class ,'index2']);
+
+Route::post('/cuaca', [ChangeController::class, 'store']);
+Route::get('/', function () {
+    return view('Base.template');
+});
 
 Route::middleware('auth')->group(function() {
-
-    Route::get('/cuaca', [CuacaController::class ,'index']);
-    Route::post('/cuaca', [CuacaController::class ,'store'])->name('tambahData.cuaca');
-    Route::get('/', function () {
-        return view('Base.template');
-    });
+ 
     
     
 });
